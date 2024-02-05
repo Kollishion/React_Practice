@@ -1,34 +1,14 @@
-import React, { useEffect, useState } from 'react'
+// https://dummyjson.com/products?limit=20&skip=
+import React, { useState } from "react";
 
 const Load_data = () => {
-  const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [count, setCount] = useState(0);
-
-  async function fetchProducts(){
-    try{
-      const response = await fetch(
-        `https://dummyjson.com/products?limit=20&skip=
-        ${count === 0 ? 0 : count * 20}`
-      );
-      const data = await response.json();
-        console.log(data);
-    }
-    catch(e){
-      console.log(e);
-    }
-  }
-
-  useEffect(() => {
-    fetchProducts();
-  }, [count])
+  const [products, setProducts] = useState([]);
   
+  return 
+  <>
 
-  return (
-    <div className="">
+  </>;
+};
 
-    </div>
-  )
-}
-
-export default Load_data
+export default Load_data;
